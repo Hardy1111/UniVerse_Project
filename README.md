@@ -9,12 +9,12 @@ Our goal is to provide a **verified, student-focused** environment with personal
 ---
 
 ## ✨ Features
-- 🧑 Student registration & verification (SheerID planned)  
-- 🏢 Company registration to post internships  
-- 🎯 Internship filtering (by degree, skills, location, interests)  
-- 📝 Profile building with skills, certificates & notes  
-- 🧠 Recommendation system for personalized internships  
-- 🩺 Optional medical information linked to QR code for emergencies
+-  Student registration & verification (SheerID planned)  
+-  Company registration to post internships  
+-  Internship filtering (by degree, skills, location, interests)  
+-  Profile building with skills, certificates & notes  
+-  Recommendation system for personalized internships  
+-  Optional medical information linked to QR code for emergencies
 
 ---
 
