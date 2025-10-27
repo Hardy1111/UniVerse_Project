@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Apply for {{ internship.title }} - UniVerse{% endblock %}
+
+{% block content %}
+<div class="dashboard-header">
+    <h1 class="dashboard-title">Apply for {{ internship.title }}</h1>
+    <p class="dashboard-subtitle">{{ internship.company.name }} • {{ internship.location }}</p>
+</div>
+
+<div class="card">
+    <div class="internship-description mb-4">
+        <h4>Internship Details:</h4>
+        <p>{{ internship.description }}</p>
+    </div>
+    
+    <form method="POST" action="{{ url_for('apply_internship') }}" enctype="multipart/form-data">
+        <input type="hidden" name="internship_id" value="{{ internship.id }}">
+        
+        <div class="form-group">
+            <label for="cv_file">
+                <i class="fas fa-file-pdf"></i> Upload CV (PDF, DOC, DOCX)
+            </label>
+            <input type="file" name="cv_file" id="cv_file" class="form-control" accept=".pdf,.doc,.docx" required>
+            <small style="color: #666;">Maximum file size: 16MB</small>
+        </div>
+        
+        <div class="form-group">
+            <label for="cover_letter">
+                <i class="fas fa-envelope"></i> Cover Letter / Motivation
+            </label>
+            <textarea name="cover_letter" id="cover_letter" class="form-control" rows="4" 
+                      placeholder="Tell us why you're interested in this internship..." required></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="availability_start">
+                <i class="fas fa-calendar"></i> When can you start?
+            </label>
+            <input type="text" name="availability_start" id="availability_start" class="form-control" 
+                   placeholder="e.g., Immediately, January 2024, Summer 2024" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="availability_duration">
+                <i class="fas fa-clock"></i> How long can you work?
+            </label>
+            <input type="text" name="availability_duration" id="availability_duration" class="form-control" 
+                   placeholder="e.g., 3 months, 6 months, 1 year" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="relevant_experience">
+                <i class="fas fa-briefcase"></i> Relevant Experience
+            </label>
+            <textarea name="relevant_experience" id="relevant_experience" class="form-control" rows="3" 
+                      placeholder="Describe any relevant work experience, projects, or skills..."></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="why_interested">
+                <i class="fas fa-heart"></i> Why are you interested in this role?
+            </label>
+            <textarea name="why_interested" id="why_interested" class="form-control" rows="3" 
+                      placeholder="What excites you about this opportunity?" required></textarea>
+        </div>
+        
+        <div class="form-actions">
+            <a href="{{ url_for('student_dashboard') }}" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Back to Dashboard
+            </a>
+            <button type="submit" class="btn btn-success">
+                <i class="fas fa-paper-plane"></i> Submit Application
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}

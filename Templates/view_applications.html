@@ -1,0 +1,158 @@
+{% extends "base.html" %} {% block title %}Applications for {{ internship.title
+}} - UniVerse{% endblock %} {% block content %}
+<div class="dashboard-header">
+  <h1 class="dashboard-title">Applications for {{ internship.title }}</h1>
+  <p class="dashboard-subtitle">
+    {{ internship.company.name }} • {{ internship.location }}
+  </p>
+</div>
+
+<div class="card">
+  <div class="internship-meta mb-3">
+    <div class="meta-item">
+      <i class="fas fa-users"></i>
+      <span
+        >{{ applications|length }} application{{ 's' if applications|length != 1
+        else '' }}</span
+      >
+    </div>
+    <div class="meta-item">
+      <i class="fas fa-calendar"></i>
+      <span>Posted {{ internship.created_at.strftime('%B %d, %Y') }}</span>
+    </div>
+  </div>
+
+  {% if applications %}
+  <div class="grid grid-2">
+    {% for application in applications %}
+    <div class="internship-card">
+      <div class="internship-title">{{ application.student.name }}</div>
+
+      <div class="internship-meta">
+        <div class="meta-item">
+          <i class="fas fa-envelope"></i>
+          <span>{{ application.student.email }}</span>
+        </div>
+        <div class="meta-item">
+          <i class="fas fa-calendar"></i>
+          <span
+            >Applied {{ application.date_applied.strftime('%B %d, %Y at %I:%M
+            %p') }}</span
+          >
+        </div>
+      </div>
+
+      {% if application.student.degree %}
+      <div class="meta-item mb-2">
+        <i class="fas fa-graduation-cap"></i>
+        <span><strong>Degree:</strong> {{ application.student.degree }}</span>
+      </div>
+      {% endif %} {% if application.student.skills %}
+      <div class="meta-item mb-2">
+        <i class="fas fa-tools"></i>
+        <span><strong>Skills:</strong> {{ application.student.skills }}</span>
+      </div>
+      {% endif %}
+
+      <!-- Application Details -->
+      <div
+        style="
+          background: #f8f9fa;
+          padding: 1rem;
+          border-radius: 8px;
+          margin: 1rem 0;
+        "
+      >
+        <h6 style="color: #333; margin-bottom: 1rem">
+          <i class="fas fa-file-alt"></i> Application Details
+        </h6>
+
+        {% if application.cover_letter %}
+        <div style="margin-bottom: 1rem">
+          <strong><i class="fas fa-envelope"></i> Cover Letter:</strong>
+          <p style="margin-top: 0.5rem; font-style: italic">
+            {{ application.cover_letter }}
+          </p>
+        </div>
+         {% endif %} {% if application.availability_start %}
+        <div style="margin-bottom: 1rem">
+          <strong><i class="fas fa-calendar"></i> Can Start:</strong>
+          <span>{{ application.availability_start }}</span>
+        </div>
+        {% endif %} {% if application.availability_duration %}
+        <div style="margin-bottom: 1rem">
+          <strong><i class="fas fa-clock"></i> Duration:</strong>
+          <span>{{ application.availability_duration }}</span>
+        </div>
+        {% endif %} {% if application.relevant_experience %}
+        <div style="margin-bottom: 1rem">
+          <strong><i class="fas fa-briefcase"></i> Relevant Experience:</strong>
+          <p style="margin-top: 0.5rem">
+            {{ application.relevant_experience }}
+          </p>
+        </div>
+        {% endif %} {% if application.why_interested %}
+        <div style="margin-bottom: 1rem">
+          <strong><i class="fas fa-heart"></i> Why Interested:</strong>
+          <p style="margin-top: 0.5rem">{{ application.why_interested }}</p>
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="internship-description">
+        <strong>Current Status:</strong>
+        <span
+          class="btn btn-{{ 'success' if application.status == 'accepted' else 'danger' if application.status == 'rejected' else 'outline' }}"
+          style="margin-left: 0.5rem"
+        >
+          {{ application.status.title() }}
+        </span>
+      </div>
+
+      <div class="internship-actions">
+        {% if application.cv_filename %}
+        <a
+          href="/uploads/{{ application.cv_filename }}"
+          target="_blank"
+          class="btn btn-outline"
+        >
+          <i class="fas fa-file-pdf"></i> Download CV
+        </a>
+        {% endif %}
+
+        <a
+          href="{{ url_for('update_application_status', id=application.id, status='accepted') }}"
+          class="btn btn-success"
+        >
+          <i class="fas fa-check"></i> Accept
+        </a>
+        <a
+          href="{{ url_for('update_application_status', id=application.id, status='rejected') }}"
+          class="btn btn-danger"
+        >
+          <i class="fas fa-times"></i> Reject
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="text-center" style="padding: 3rem 0">
+    <i
+      class="fas fa-users"
+      style="font-size: 4rem; color: #ccc; margin-bottom: 1rem"
+    ></i>
+    <h4 style="color: #666; margin-bottom: 1rem">No applications yet</h4>
+    <p style="color: #999">
+      Applications will appear here when students apply for this internship.
+    </p>
+  </div>
+  {% endif %}
+</div>
+
+<div class="text-center mt-4">
+  <a href="{{ url_for('company_dashboard') }}" class="btn btn-outline">
+    <i class="fas fa-arrow-left"></i> Back to Dashboard
+  </a>
+</div>
+{% endblock %}
