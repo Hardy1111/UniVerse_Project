@@ -70,7 +70,52 @@ Below is the consolidated list of requirements gathered from both the survey and
 | R15 | Website supports multiple languages (future update) |
 
 ## 2. Requirements Classification
-*(To be added later)*
+
+### 2.1 Purpose
+The goal of this section is to organize and categorize all the raw requirements identified during the elicitation phase.  
+Each requirement is classified based on its **type** (Functional or Non-Functional) and **level** (User or System).
+
+---
+
+### 2.2 Requirements Classification Table
+
+| ID | Requirement Description | Type | Level |
+|----|--------------------------|-------|--------|
+| R1 | Students can browse and apply for internships through the platform | Functional | User |
+| R2 | Students can upload their CV or personal info when applying | Functional | User |
+| R3 | Admins can review and approve internship applications | Functional | System |
+| R4 | Students receive notifications when application status changes | Functional | System |
+| R5 | Students can view submitted forms (internship, medical, etc.) in a dashboard | Functional | User |
+| R6 | Admins can manage and filter applications | Functional | System |
+| R7 | System stores emergency medical info accessible via QR code | Functional | System |
+| R8 | Platform supports both mobile and desktop access | Non-Functional | System |
+| R9 | Students have a personal profile showing internship progress | Functional | User |
+| R10 | Platform should be clean, simple, and user-friendly | Non-Functional | System |
+| R11 | Users can log in securely with personal credentials | Functional | System |
+| R12 | Admins can post or update internship opportunities | Functional | System |
+| R13 | Students can rate internship experiences (optional) | Functional | User |
+| R14 | System sends automatic confirmation messages on form submission | Functional | System |
+| R15 | Website supports multiple languages (future update) | Non-Functional | System |
+
+---
+
+### 2.3 Analysis Summary
+
+- **Functional Requirements (12 total):**  
+  These describe what the UniVerse platform will *do*. They include the main actions such as registration, internship applications, admin management, notifications, and data handling.
+
+- **Non-Functional Requirements (3 total):**  
+  These describe how the system will *behave* or perform, such as having a simple interface, supporting multiple devices, and future language options.
+
+- **User-Level Requirements:**  
+  Requirements that are directly visible or used by students (R1, R2, R5, R9, R13).
+
+- **System-Level Requirements:**  
+  Requirements that operate behind the scenes or are managed by administrators and the system (R3, R4, R6, R7, R8, R10, R11, R12, R14, R15).
+
+
+---
+
 
 ## 3. Structured Specifications
 *(To be added later)*
