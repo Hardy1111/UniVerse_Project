@@ -101,11 +101,4 @@ The UniVerse system involves the following main actors:
 
 ---
 
-## 3. UML Use Case Diagram
-Below is the use case diagram representing the relationships between actors and use cases in the UniVerse system.
-
-*(Insert your UML diagram image here)*  
-Example:
-```markdown
-![Use Case Diagram](assets/universe_usecase_diagram.png)
 
