@@ -117,8 +117,102 @@ Each requirement is classified based on its **type** (Functional or Non-Function
 ---
 
 
-## 3. Structured Specifications
-*(To be added later)*
+
+## 3. Structured Specification Developer
+
+### 3.1 Purpose
+This section presents the **structured specifications** for three critical functional requirements of the **UniVerse** platform.  
+Each specification provides detailed information about the function, inputs, outputs, and actions needed to implement the feature successfully.
+
+---
+
+### 🧩 R1 – Student Can Browse and Apply for Internships
+
+**Function:**  
+Allow students to browse active internship listings and apply directly through the platform.
+
+**Description:**  
+Students can search for and view available internship opportunities and submit applications.
+
+**Inputs:**  
+- Degree  
+- Skill  
+- Interest  
+- Location  
+- Company name  
+- Industry  
+
+**Outputs:**  
+- List of internships  
+- Company name  
+- Location  
+
+**Destination:**  
+Displayed on the student’s dashboard.
+
+**Actions:**  
+1. Retrieve all active internships from the database.  
+2. Display listings with filtering and search capability.  
+3. Accept student application and uploaded files.
+
+**Requires:**  
+- Student account (logged in)  
+- Active internship listings  
+
+**Precondition:**  
+The student’s email must be linked with **SheerID** for verification.
+
+---
+
+### 🧩 R2 – Admin Management and Filtering of Applications
+
+**Function:**  
+Allow administrators to filter, sort, and manage internship applications using various parameters.
+
+**Description:**  
+Admins can view, search, and filter available internship applications and see detailed information for each listing.
+
+**Inputs:**  
+- Filter options: title, description, required skills, degree required  
+
+**Outputs:**  
+- Filtered application list  
+
+**Destination:**  
+Displayed on the admin dashboard as a filtered internship view.
+
+**Actions:**  
+1. Admin enters a filter or search query.  
+2. System retrieves and displays matching records.  
+
+---
+
+### 🧩 R3 – Admin Posting and Updating Internship Opportunities
+
+**Function:**  
+Allow companies or administrators to post, update, or delete internship listings.
+
+**Description:**  
+Companies can manage internship listings by creating new posts or editing existing ones.
+
+**Inputs:**  
+- Company name  
+- Email  
+- Industry  
+- Location  
+- Description  
+
+**Outputs:**  
+- New internship post  
+- Updated internship information  
+
+**Destination:**  
+Internship listings database.
+
+**Requires:**  
+- Company name (verified company account)
+
+---
 
 ## 4. Requirements Prioritization
 *(To be added later)*
