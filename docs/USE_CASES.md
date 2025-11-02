@@ -85,19 +85,19 @@ The UniVerse system involves the following main actors:
 ---
 
 ### **Use Case 5: Confirm Internships and Companies**
-**Actors:** Admin, Verification System  
+**Actors:** Admin, SheerID  
 **Goal:** Ensure all listed internships and companies are verified and legitimate.  
 
 **Preconditions:**
-- Verification requests for companies or internships must exist.  
+- SheerID requests for companies or internships must exist.  
 
 **Main Flow:**
-1. The Admin opens the verification dashboard.  
+1. The Admin opens the SheerID dashboard.  
 2. The system fetches all pending verification requests.  
 3. The Admin reviews the company and internship information.  
-4. The system verifies the submitted details.  
+4. SheerID verifies the submitted details.  
 5. The Admin updates the status to “Approved” or “Rejected.”  
-6. The system marks the verified entities as trusted and visible to students.
+6. SheerID marks the verified entities as trusted and visible to students.
 
 ---
 
