@@ -1,14 +1,14 @@
 # REQUIREMENTS VALIDATION
 
-## 6. Validation & Quality Assurance Lead
+## Validation & Quality Assurance Lead
 
-### 6.1 Purpose
+### Purpose
 The purpose of this section is to ensure that all requirements for the **UniVerse** platform are valid, consistent, complete, and realistic.  
 Validation confirms that the system design truly meets user needs, while Quality Assurance guarantees the accuracy and reliability of all requirement documents before development begins.
 
 ---
 
-### 6.2 Consistency Check
+### Consistency Check
 A consistency check was performed across all requirement documents, including the elicitation, classification, structured specifications, and prioritization tables.
 
 **Findings:**
@@ -21,7 +21,7 @@ A consistency check was performed across all requirement documents, including th
 
 ---
 
-### 6.3 Completeness Check
+### Completeness Check
 The completeness check ensures that every critical system function has been captured and described properly.
 
 **Findings:**
@@ -34,7 +34,7 @@ The completeness check ensures that every critical system function has been capt
 
 ---
 
-### 6.4 Risks Identified
+### Risks Identified
 
 | ID | Risk Description | Impact | Mitigation Strategy |
 |----|------------------|---------|----------------------|
@@ -46,7 +46,7 @@ The completeness check ensures that every critical system function has been capt
 
 ---
 
-### 6.5 Validation Methods
+### Validation Methods
 The following validation methods will be applied to confirm requirement correctness and quality:
 
 1. **Peer Reviews:**  
