@@ -215,5 +215,46 @@ Internship listings database.
 ---
 
 ## 4. Requirements Prioritization
-*(To be added later)*
+
+### 4.1 Purpose
+The purpose of this section is to assign a **priority level** to each requirement according to its importance, feasibility, and impact on the UniVerse platform.  
+The priorities follow the standard categories:
+- **M – Mandatory:** Core features essential for system functionality.  
+- **N – Nice to Have:** Valuable additions that can be implemented if time and resources allow.  
+- **S – Superfluous:** Low-priority features planned for future versions or considered non-essential.
+
+---
+
+### 4.2 Prioritization Table
+
+| ID | Requirement Description | Priority | Justification |
+|----|--------------------------|-----------|----------------|
+| R1 | Students can browse and apply for internships through the platform | **M** | Central feature of UniVerse; core project goal. |
+| R2 | Students can upload their CV or personal info when applying | **M** | Necessary for completing internship applications. |
+| R3 | Admins can review and approve internship applications | **M** | Required to validate and manage student applications. |
+| R4 | Students receive notifications when application status changes | **N** | Useful for user engagement but not essential for MVP. |
+| R5 | Students can view submitted forms (internship, medical, etc.) in a dashboard | **M** | Key student function to track progress and submissions. |
+| R6 | Admins can manage and filter applications | **M** | Important for maintaining organized records and workflow. |
+| R7 | System stores emergency medical info accessible via QR code | **N** | Valuable safety feature; can be added after core launch. |
+| R8 | Platform supports both mobile and desktop access | **M** | Ensures accessibility and usability across devices. |
+| R9 | Students have a personal profile showing internship progress | **M** | Enhances user experience and system transparency. |
+| R10 | Platform should be clean, simple, and user-friendly | **M** | Directly affects usability and overall design quality. |
+| R11 | Users can log in securely with personal credentials | **M** | Fundamental for authentication and data protection. |
+| R12 | Admins can post or update internship opportunities | **M** | Core requirement for maintaining internship listings. |
+| R13 | Students can rate internship experiences (optional) | **S** | Future enhancement; not needed for current release. |
+| R14 | System sends automatic confirmation messages on form submission | **N** | Improves communication but not mission-critical. |
+| R15 | Website supports multiple languages (future update) | **S** | Planned future feature once the main system is stable. |
+
+---
+
+### 4.3 Summary
+- **Mandatory (M):** 9 requirements — the foundation of the UniVerse MVP version.  
+- **Nice to Have (N):** 3 requirements — recommended for version 2 updates.  
+- **Superfluous (S):** 2 requirements — postponed to later stages.
+
+The prioritization ensures that the development team focuses first on **core system functionality** (student-admin interactions and internship management) before adding secondary enhancements such as notifications, multilingual support, or ratings.
+
+---
+
+
 
