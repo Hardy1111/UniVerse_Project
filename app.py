@@ -1,5 +1,5 @@
 #imports
-
+ 
 from flask import Flask, render_template, request, redirect, url_for, session, flash, send_from_directory
 from models import db, Student, Company, Internship, Application
 import os
