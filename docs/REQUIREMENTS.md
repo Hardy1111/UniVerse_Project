@@ -108,9 +108,6 @@ Each requirement is classified based on its **type** (Functional or Non-Function
 
 ---
 
-
-
-
 ## 3. Structured Specification Developer
 
 ### 3.1 Purpose
@@ -157,26 +154,28 @@ The student’s email must be linked with **SheerID** for verification.
 
 ---
 
-### 🧩 R2 – Admin Management and Filtering of Applications
+### 🧩 R2 – Admin Review and Approval of Applications
 
 **Function:**  
-Allow administrators to filter, sort, and manage internship applications using various parameters.
+Allow administrators to view, review, and approve or reject internship applications.
 
 **Description:**  
-Admins can view, search, and filter available internship applications and see detailed information for each listing.
+Admins can manage student internship submissions and update their status accordingly.
 
 **Inputs:**  
-- Filter options: title, description, required skills, degree required  
+- Application list  
+- Decision (approve/reject)  
 
 **Outputs:**  
-- Filtered application list  
+- Updated application status  
 
 **Destination:**  
-Displayed on the admin dashboard as a filtered internship view.
+Student’s dashboard and admin dashboard.
 
 **Actions:**  
-1. Admin enters a filter or search query.  
-2. System retrieves and displays matching records.  
+1. Retrieve pending applications from the database.  
+2. Admin selects an application and reviews details.  
+3. Admin approves or rejects the application.  
 
 ---
 
@@ -226,28 +225,20 @@ The priorities follow the standard categories:
 | R2 | Students can upload their CV or personal info when applying | **M** | Necessary for completing internship applications. |
 | R3 | Admins can review and approve internship applications | **M** | Required to validate and manage student applications. |
 | R4 | Students receive notifications when application status changes | **N** | Useful for user engagement but not essential for MVP. |
-| R5 | Students can view submitted forms (internship, medical, etc.) in a dashboard | **M** | Key student function to track progress and submissions. |
-| R6 | Admins can manage and filter applications | **M** | Important for maintaining organized records and workflow. |
-| R7 | System stores emergency medical info accessible via QR code | **N** | Valuable safety feature; can be added after core launch. |
-| R8 | Platform supports both mobile and desktop access | **M** | Ensures accessibility and usability across devices. |
-| R9 | Students have a personal profile showing internship progress | **M** | Enhances user experience and system transparency. |
-| R10 | Platform should be clean, simple, and user-friendly | **M** | Directly affects usability and overall design quality. |
-| R11 | Users can log in securely with personal credentials | **M** | Fundamental for authentication and data protection. |
-| R12 | Admins can post or update internship opportunities | **M** | Core requirement for maintaining internship listings. |
-| R13 | Students can rate internship experiences (optional) | **S** | Future enhancement; not needed for current release. |
-| R14 | System sends automatic confirmation messages on form submission | **N** | Improves communication but not mission-critical. |
-| R15 | Website supports multiple languages (future update) | **S** | Planned future feature once the main system is stable. |
+| R5 | System stores emergency medical info accessible via QR code | **N** | Valuable safety feature; can be added after core launch. |
+| R6 | Platform supports both mobile and desktop access | **M** | Ensures accessibility and usability across devices. |
+| R7 | Platform should be clean, simple, and user-friendly | **M** | Directly affects usability and overall design quality. |
+| R8 | Users can log in securely with personal credentials | **M** | Fundamental for authentication and data protection. |
+| R9 | Admins can post or update internship opportunities | **M** | Core requirement for maintaining internship listings. |
+| R10 | Website supports multiple languages (future update) | **S** | Planned future feature once the main system is stable. |
 
 ---
 
 ### 4.3 Summary
-- **Mandatory (M):** 9 requirements — the foundation of the UniVerse MVP version.  
-- **Nice to Have (N):** 3 requirements — recommended for version 2 updates.  
-- **Superfluous (S):** 2 requirements — postponed to later stages.
+- **Mandatory (M):** 5 requirements — the foundation of the UniVerse MVP version.  
+- **Nice to Have (N):** 2 requirements — recommended for version 2 updates.  
+- **Superfluous (S):** 1 requirement — postponed to later stages.
 
-The prioritization ensures that the development team focuses first on **core system functionality** (student-admin interactions and internship management) before adding secondary enhancements such as notifications, multilingual support, or ratings.
+The prioritization ensures that the development team focuses first on **core system functionality** (student-admin interactions and internship management) before adding secondary enhancements such as multilingual support or notifications.
 
 ---
-
-
-
