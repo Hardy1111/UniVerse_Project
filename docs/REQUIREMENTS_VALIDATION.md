@@ -39,7 +39,7 @@ The completeness check ensures that every critical system function has been capt
 
 | ID | Risk Description | Impact | Mitigation Strategy |
 |----|------------------|---------|----------------------|
-| **RISK-1** | Incompatibility between the front-end (HTML/Tailwind) and back-end (Flask) during system integration. | **High** | Use **GitHub branches and pull requests** for controlled integration. Each feature will be developed and tested in its own branch, reviewed via GitHub before merging, ensuring consistent data formats (JSON) and avoiding conflicts. |
+| **RISK-1** | Integration errors or overwriting files when multiple members commit at the same time. | **High** | Before any commit or push, team members communicate through **Slack or WhatsApp** to confirm no one else is editing the same file. Everyone pulls the latest version first, tests their part locally, then commits with a clear message. |
 | **RISK-2** | Delay in development due to team members’ limited experience with Flask or Tailwind. | **Medium** | Assign small learning tasks early, follow official documentation, and pair experienced members with beginners through code reviews. |
 | **RISK-3** | Poor or confusing UI design may make navigation difficult for first-time users. | **Medium** | Conduct quick usability tests with students, gather feedback, and refine layouts before final submission. |
 
