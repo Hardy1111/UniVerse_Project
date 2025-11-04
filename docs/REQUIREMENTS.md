@@ -144,9 +144,9 @@ our recommendation system will provide the best interest based on the input
 Displayed on the student’s dashboard.
 
 **Actions:**  
-1. Retrieve all active internships from the database.  
-2. Display listings with filtering and search capability.  
-3. Accept student application and uploaded files.
+- Retrieve all active internships from the database.  
+-  Display listings with filtering and search capability.  
+-  Accept student application and uploaded files.
 
 **Requires:**  
 - Student account (logged in)  
@@ -166,41 +166,52 @@ a internship has been filled and maybe the company manger forgets to update the 
 ### 🧩 R2 – Company manger review and approve internship
 
 **Function:**
+
 Allow company managers to review student internship applications and approve or reject them through the platform.
 
 **Description:**
+
 verified company manager to access students application, review the student CV, skill, degree, and make decision to whether to accept it or reject it.
 
 **Input:**
+
  - student name
  - degree
  - skill
  - CV
 
 **Source:**
+
 company manger looking at student profile 
 
 **Output:**
+
 - student name
 - students’ skill
 - degree
 
 **Destination:**
+
 student profile that the manger is reviewing it to whether to accept it or no
 
-**Action:**
+**Action:** 
+
 select student profile and review them and make decision on them 
 
 **Require:**
+
 Company name (verified company account)
 
 **Precondition:**
+
 student profile who are looking for internship, the company manger must be authenticated
 
 **Postcondition:**
+
 after reviewing the student profile, there must option to the manager to whther to accepted or rejected it
 
 **Side Effect:**
+
 the student must be still active, after approving the notification may not go the student and the student may never know whether its application is accepted or not
 
 
