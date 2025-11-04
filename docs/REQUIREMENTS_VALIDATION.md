@@ -14,8 +14,8 @@ A consistency check was performed across all requirement documents, including th
 **Findings:**
 - No duplicated or contradictory requirements were found.  
 - The same terminology is used across all roles (e.g., *Student*, *Admin*, *Internship*).  
-- Functional and non-functional requirements align with the system’s class diagram and structured specifications.  
-- System workflows match what is described in the class diagram.
+- Functional and non-functional requirements align with the system’s Use Case diagram and structured specifications.  
+- System workflows match what is described in the Use Case diagram.
 
 ✅ **Result:** All requirements are internally consistent and compatible for implementation.
 
@@ -26,7 +26,7 @@ The completeness check ensures that every critical system function has been capt
 
 **Findings:**
 - All ten requirements (R1–R10) were covered and linked to corresponding system components.  
-- The major functions — login, internship application, admin management, and dashboard — are fully represented.  
+- The major functions — login, internship application, Company management, and dashboard — are fully represented.  
 - Future improvements (Community, QR medical info, Gamify Study session) we would like to add if we ever expand our platform
 
 - No essential feature or actor was omitted.
