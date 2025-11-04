@@ -122,7 +122,7 @@ Each specification provides detailed information about the function, inputs, out
 Allow students to browse active internship listings and apply directly through the platform.
 
 **Description:**  
-Students can search for and view available internship opportunities and submit applications.
+students to search and view available internship opportunities filtered by their degree, skills, interests, location, and preferred company or industry. Students can then submit applications through the same interface.
 
 **Inputs:**  
 - Degree  
@@ -130,7 +130,10 @@ Students can search for and view available internship opportunities and submit a
 - Interest  
 - Location  
 - Company name  
-- Industry  
+- Industry
+
+**Source:**
+our recommendation system will provide the best interest based on the input
 
 **Outputs:**  
 - List of internships  
@@ -152,57 +155,106 @@ Displayed on the student’s dashboard.
 **Precondition:**  
 The student’s email must be linked with **SheerID** for verification.
 
----
+**Postcondition:**
+internship offer show to the students based on their interest
 
-### 🧩 R2 – Admin Review and Approval of Applications
-
-**Function:**  
-Allow administrators to view, review, and approve or reject internship applications.
-
-**Description:**  
-Admins can manage student internship submissions and update their status accordingly.
-
-**Inputs:**  
-- Application list  
-- Decision (approve/reject)  
-
-**Outputs:**  
-- Updated application status  
-
-**Destination:**  
-Student’s dashboard and admin dashboard.
-
-**Actions:**  
-1. Retrieve pending applications from the database.  
-2. Admin selects an application and reviews details.  
-3. Admin approves or rejects the application.  
+**Side Effect:**
+a internship has been filled and maybe the company manger forgets to update the page and student are still uplaying for it 
 
 ---
 
-### 🧩 R3 – Admin Posting and Updating Internship Opportunities
+### 🧩 R2 – Company manger review and approve internship
 
-**Function:**  
-Allow companies or administrators to post, update, or delete internship listings.
+**Function:**
+Allow company managers to review student internship applications and approve or reject them through the platform.
 
-**Description:**  
-Companies can manage internship listings by creating new posts or editing existing ones.
+**Description:**
+verified company manager to access students application, review the student CV, skill, degree, and make decision to whether to accept it or reject it.
 
-**Inputs:**  
-- Company name  
-- Email  
-- Industry  
-- Location  
-- Description  
+**Input:**
+ - student name
+ - degree
+ - skill
+ - CV
 
-**Outputs:**  
-- New internship post  
-- Updated internship information  
+**Source:**
+company manger looking at student profile 
 
-**Destination:**  
-Internship listings database.
+**Output:**
+- student name
+- students’ skill
+- degree
 
-**Requires:**  
-- Company name (verified company account)
+**Destination:**
+student profile that the manger is reviewing it to whether to accept it or no
+
+**Action:**
+select student profile and review them and make decision on them 
+
+**Require:**
+Company name (verified company account)
+
+**Precondition:**
+student profile who are looking for internship, the company manger must be authenticated
+
+**Postcondition:**
+after reviewing the student profile, there must option to the manager to whther to accepted or rejected it
+
+**Side Effect:**
+the student must be still active, after approving the notification may not go the student and the student may never know whether its application is accepted or not
+
+
+---
+
+### 🧩 R3 – User can log-in securely with personal credential
+
+
+**Function:**
+
+Allow users to log in securely using their personal credentials
+
+**Description:**
+
+verified users to access the platform by entering their registered email and password. The system validates the credentials, applies encryption for password security, and grants access to the appropriate dashboard based on the user role 
+
+**Input:** 
+
+- email
+-  password
+
+**Source:**
+
+ User input through the login interface on the platform
+
+**Output:**
+
+ - Authentication success or failure message
+ -  User taken, student email is not link with sheerID
+ 
+**Destination:**
+
+- user inside their profile
+-  user fail to log in
+
+**Require:**
+
+ - student email with sheerID
+ - encryption
+ -  verified company email
+ 
+**Precondition:**
+
+- student email with sheerID
+- verified company email
+
+**Postcondition:**
+
+after failing to log in will be repeated (limit time) until all required are done, after successfully login which user will be in his/her own email
+
+**Side Effect:**
+
+ May trigger temporary account lock after multiple failed attempts<
+
 
 ---
 
