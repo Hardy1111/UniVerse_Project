@@ -25,9 +25,10 @@ A consistency check was performed across all requirement documents, including th
 The completeness check ensures that every critical system function has been captured and described properly.
 
 **Findings:**
-- All fifteen requirements (R1–R15) were covered and linked to corresponding system components.  
+- All ten requirements (R1–R10) were covered and linked to corresponding system components.  
 - The major functions — login, internship application, admin management, and dashboard — are fully represented.  
-- Future improvements (Community, QR medical info, Gamify Study session) are documented but not mandatory.  
+- Future improvements (Community, QR medical info, Gamify Study session) we would like to add if we ever expand our platform
+
 - No essential feature or actor was omitted.
 
 ✅ **Result:** The requirements are complete and sufficient for developing the UniVerse MVP (Minimum Viable Product).
@@ -56,7 +57,7 @@ The following validation methods will be applied to confirm requirement correctn
    Early testing of the working prototype with real students and an admin user will ensure that system behavior matches the documented requirements.    
 
 3. **Requirement Traceability Matrix (RTM):**  
-   Each requirement (R1–R15) will be mapped to its corresponding implementation task in the GitHub repository to track progress.
+   Each requirement (R1–R10) will be mapped to its corresponding implementation task in the GitHub repository to track progress.
 
 ---
 
