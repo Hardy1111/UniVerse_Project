@@ -102,7 +102,7 @@ The UniVerse system involves the following main actors:
 ---
 
 ## 3. UML Diagram
-![Use Case Diagram](assets/Use case-UniVerse.svg)
+![Use Case Diagram](assets/Use_Case.svg)
 
 
 
